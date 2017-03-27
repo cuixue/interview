@@ -4,7 +4,7 @@
 
 2.拟牛顿法,svrg,智力题,
 
-3.防止过拟合的方法，激活函数，数据预处理降维的方法,参数初始化的方法,pooling的作用
+3.防止过拟合的方法,激活函数,数据预处理降维的方法,参数初始化的方法,pooling的作用
 
 
 
@@ -47,5 +47,12 @@ GBDT预测时每一棵树是否能并行?https://www.zhihu.com/question/41272145
 深度学习相关的职位面试时一般会问什么？会问一些传统的机器学习算法吗？ https://www.zhihu.com/question/54308150
 
 ## 参考
-正则化的方法：early stopping、数据集扩增（Data augmentation）、正则化（Regularization）包括L1、L2（L2 regularization也叫weight decay），dropout。
+正则化的方法：early stopping、数据集扩增（Data augmentation）、正则化（Regularization）包括L1、L2（L2 regularization也叫weight decay），dropout,Bagging and Other Ensemble Methods.
 
+pooling的作用:位移的不变性,减小下一层输入大小，减小计算量和参数个数,获得定长输出。（文本分类的时候输入是不定长的，可以通过池化获得定长输出）
+
+参数初始化的方法:参数的初始化很重要，对于函数的优化. 均匀,正态和正交初始化,两种初始化，初始化的大小很重要.从优化的角度想让参数大,这样有信息传播;从正则的角度想让参数小,
+
+激活函数:sigmoid,tanh,relu,leaky relu(给负半轴一个权重),参数化relu(负半轴的斜率是学出来的而不是预先设定好的),随机化Relu(负半轴被随机初始化一个值)
+
+数据预处理(降维的方法): 中心化和归一化(减去均值除以方差,这种只适用于不同维度的特征需要不同的缩放), PCA(降维), 特征清洗(把空间中的数据除以每个维度的特征值,用以缩放,这种方法会极大的放大数据中的噪声)
